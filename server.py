@@ -53,7 +53,7 @@ def viewres():
 
 
 
-@app.route("/book")
+@app.route("/book", methods=['GET','POST'])
 def bookres():
     """Booking a new reservation
     Shows filtered results according to user entries"""
@@ -61,6 +61,7 @@ def bookres():
     starttime = request.args.get('starttime')
     endtime = request.args.get('endtime')
     date = request.args.get('date')
+
 
     return render_template("book.html",starttime=starttime,endtime=endtime,date=date)
 

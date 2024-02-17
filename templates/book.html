@@ -3,5 +3,22 @@
 
 {% block main %}
 
+<form action="/book">
+    <br>
+<label for="date">Date: </label>
+<input type="date" name = "date">
+    <br><br>
+
+    <small> Please note that Hours of Operation are 10am to 3pm </small>
+<br>
+<label for="start-time"> Start Time </label> <small>
+<input type="time" name = "starttime">
+
+<br><br>
+<label for="end-time"> End Time </label>
+<input type="time" name = "endtime">           
+<br><br>
+    <button class="button" type="submit"> Look for Available Times </button>
+</form>
 
 {% endblock main%}

@@ -16,10 +16,20 @@ def view_own_reservations(username):
 
 # def view_reservations_for_booking(date,starttime,endtime):
 
+
     
+def check_against_all_reservations(date,time):
+    return bool(Reservation.query.filter(Reservation.date==date,Reservation.time==time))
+
+# prevent double booking for same day
+# def check_against_own_res(date,username):
+
+#     view_own_reservations(username)
 
 
 def book_reservation(date, time, reservationuser):
+
+    # include a conditional for opening hours
 
     reservation = Reservation(
         date=date,
