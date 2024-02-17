@@ -34,7 +34,7 @@ class User(database.Model):
     
 
 
-class User(database.Model):
+class Reservation(database.Model):
 
     """Melon tasting reservations that have been booked"""
 
