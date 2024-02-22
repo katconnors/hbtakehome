@@ -33,7 +33,7 @@ def login():
             if crud.user_in_db(session['username']):
                 return redirect("/loginconfirmed")
             else:
-                return redirect('/log.html')
+                return redirect("/login")
     else:
         return render_template("log.html")
 
@@ -62,7 +62,8 @@ def bookres():
     endtime = request.args.get('endtime')
     date = request.args.get('date')
 
-
+    print(date)
+    print(type(date))
     return render_template("book.html",starttime=starttime,endtime=endtime,date=date)
 
 
